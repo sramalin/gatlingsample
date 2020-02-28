@@ -37,7 +37,7 @@ class PostComment extends Simulation {
 
 
 
-  setUp(postComment.inject(rampUsers(100) over (1)))
+  setUp(postComment.inject(rampUsers(150) over (10)))
   	  .assertions(global.responseTime.max.lt(5000))
       .assertions(global.failedRequests.count.is(0))
 
